@@ -1,16 +1,21 @@
 # Machine Learning Trading Bot Application
 
-Our portfolio analysis application can be used by anyone looking to invest over one million dollars into a portfolio. The goal of this application is to provide our user with data analytics that can help the user decide the time horizon he/she would like to invest for.
+Our Machine Learning trading bot using SVC and Logistic Regression Machine Learning algorithms to determine if a buy or sell should be done. Our only additional condition for a sell trade is if we currently have a long position. In other words, we only sell to close out a buy position, and never do a sell trade in order to go short the market.
 
-The application will ask the user for the amount they would like to invest, and for the user's risk tolerence. Our team has custom made 3 seperate baskets of  equities based on different levels of risk so we can provide a portfolio tailored to the user's preference.
+We use SMAs and MACD technical analysis indicators to feed the machine learning algorithms. Additionally, we have a function that cycles through various short and long windows for the moving average indicators to determine which combination of windows are the best. Within the same function, we also loop through various training period time frames to determine what is the best way to split our data into training and testing datasets for the algorithms.
 
-Each basket contains 5 equities, and the application will use a formula to assign weights for each of the equities in an attempt to produce the maximum amount of returns for our user.
+After the machine learning algorithms are complete we also keep track of our position, and our portfolio holdings as we cycle through all the dates of the dataset.
 
-The application uses Monte Carlo Simulations to give the user an idea of how their portfolio might look at the end of their holding period by showcasing a lower and upper bound prediction using a 95% confidence interval.
 
-Our Monte Carlo Simulations run for three different time periods: 5 years, 10 years, and 20 years.
+We will quickly define what is accuracy, precision, and recall as we think it would be helpful.
 
-With the results of our simulations, the application will output a csv file with all the user's information. This report will include the portfolio value, the equities in the portfolio, the amount of shares per equity, the value assigned to each equity, and the 3 Monte Carlo Simulations with their lower and upper bound prediction using a 95% confidence interval.
+Accuracy = (number of True Positives + number of True Negatives) / Number of all datapoints (True and False Positives and Negatives)
+
+Precision = (number of true positives) / (number of true positives + number of false positives)
+So this number answers of all the positives you got, how many were correctly identified as positives?
+
+Recall = (number of true positives) / (number of true positives + number of false negatives)
+This metric asks of all the real world positives that were in the dataset, how many of them did the model identify?
 
 ---
 
@@ -42,16 +47,14 @@ The Portfolio Analysis Application leverages Python version 3.7.10 and Git versi
 
 ## Usage
 
-To use the application, launch jupyter lab from the gitbash terminal and run the 'portfolio_analysis.ipynb' noteback from the 
-webpage. Ensure the 'MCForecastTools.py' file, 'gitignore' file, and '.env' files are in the directory where you run 'portfolio_analysis.ipynb'.
+To use the application, launch jupyter lab from the gitbash terminal and run the 'portfolio_analysis.ipynb' noteback from the webpage. Ensure the 'MCForecastTools.py' file, 'gitignore' file, and '.env' files are in the dir]\ectory where you run 'portfolio_analysis.ipynb'.
 The user will be asked to input a portfolio amount, and their risk tolerence. The user will be asked to choose a number from 1 to 3, which translates to conservative, moderate, and aggresive. The client is also free to change allocation percentages in the monte carlo simulation, the years we simulate, and even include more than 5 equities if they desire. 
 
 ---
 
 ## Contributors
 
-
-The contributors are Paul Lopez, Chaim Kriger, Bipasha Goswami, Briggs Lalor, and Nev Douglas
+The contributors are Paul Lopez, Chaim Kriger, Isaac Iskra, Horayra Hossain
 
 ---
 
