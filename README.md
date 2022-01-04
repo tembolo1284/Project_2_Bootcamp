@@ -1,4 +1,6 @@
-# Machine Learning Trading Bot Application
+# Intuitive Trading Notification App (ITNA)
+
+Our creative intuitive application is a concept of allowing a user to be more in tune with purchasing and selling stocks and crypto. With newer and easier applications to allow a new and more diverse group of traders, there are limited applications which intuitively notify the user based on their trading patterns. 
 
 Our Machine Learning trading bot using SVC and Logistic Regression Machine Learning algorithms to determine if a buy or sell should be done. Our only additional condition for a sell trade is if we currently have a long position. In other words, we only sell to close out a buy position, and never do a sell trade in order to go short the market.
 
