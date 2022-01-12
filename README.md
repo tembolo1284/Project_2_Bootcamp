@@ -1,4 +1,4 @@
-# Intuitive Trading Notification App (ITNA)
+# Intuitive Trading App
 
 Our creative intuitive algorithmic trading application is a concept of allowing a user to be more in tune with purchasing and selling stocks, currency, fixed income instruments, and crypto currency. With newer and easier applications to allow a new and more diverse group of traders, there are limited applications which intuitively notify the user based on their trading patterns.  Machine learning is used in this applicaiton to study previous trading pattern behavior, and we use the predictions of the algorithm to notify the user of trades and positions taken as the machine learning algorithms predict them.
 
