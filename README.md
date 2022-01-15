@@ -1,6 +1,6 @@
 # Intuitive Trading App
 
-Our creative intuitive algorithmic trading application is a concept of allowing a user to be more in tune with purchasing and selling stocks, currency, fixed income instruments, and crypto currency. With newer and easier applications to allow a new and more diverse group of traders, there are limited applications which intuitively notify the user based on their trading patterns.  Machine learning is used in this applicaiton to study previous trading pattern behavior, and we use the predictions of the algorithm to notify the user of trades and positions taken as the machine learning algorithms predict them.
+Our intuitive algorithmic trading application is a concept of allowing a user to be more in tune with purchasing and selling stocks, currency, fixed income instruments, and crypto currency. With newer and easier applications to allow a new and more diverse group of traders, there are limited applications which intuitively notify the user based on their trading patterns.  Machine learning is used in this application to study previous trading pattern behavior, and we use the predictions of the algorithm to notify the user of trades and positions taken as the machine learning algorithms predict them.
 
 Our Machine Learning trading bot uses SVC and Logistic Regression Machine Learning to determine if a buy or sell should be done. Our only additional condition for a sell trade is if we currently have a long position. In other words, we only sell to close out a buy position, and never do a sell trade in order to go short the market.
 
@@ -8,6 +8,7 @@ We use SMAs and Bollinger Bands technical analysis indicators to feed the machin
 
 After the machine learning algorithms are complete we also keep track of our position, and our portfolio holdings as we cycle through all the dates of the dataset.
 
+We also decided to leverage Amazon's AWS Lex chat bot to create a more personalized experience for the client using our application. Through the chat bot, the client can be given recommendations of what other instruments they might be interested in investing in. For example, if a client picks a more high volatility stock like Tesla, our bot recommends other high volatility instruments such as Gamestop or Bitcoin.  If the client agrees, this instrument can easily be worked into the portfolio and be a part of the algorithm trading bot.
 
 We will quickly define what is accuracy, precision, and recall as we think it would be helpful.
 
